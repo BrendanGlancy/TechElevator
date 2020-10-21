@@ -1,0 +1,3 @@
+Git will not save empty directories, so this file is a placeholder to create the directory structure until the directory has contents.
+
+interesting

@@ -1,0 +1,1 @@
+The src/main/resources folder typically holds configuration information, images, and other miscellaneous files needed to run the application. 

@@ -1,0 +1,46 @@
+Input Line Value[0] is: 100
+Input Line Value[1] is: 200
+Input Line Value[2] is: 150
+The sum of the values in the line is: 450
+Input Line Value[0] is: 140
+Input Line Value[1] is: 120
+Input Line Value[2] is: 130
+The sum of the values in the line is: 390
+Input Line Value[0] is: 1
+Input Line Value[1] is: 2
+Input Line Value[2] is: 3
+Input Line Value[3] is: 4
+Input Line Value[4] is: 5
+Input Line Value[5] is: 6
+Input Line Value[6] is: 7
+Input Line Value[7] is: 8
+Input Line Value[8] is: 9
+The sum of the values in the line is: 45
+Input Line Value[0] is: 90
+Input Line Value[1] is: 80
+Input Line Value[2] is: 70
+Input Line Value[3] is: 60
+The sum of the values in the line is: 300
+Input Line Value[0] is: 100
+Input Line Value[1] is: 200
+Input Line Value[2] is: 150
+The sum of the values in the line is: 450
+Input Line Value[0] is: 140
+Input Line Value[1] is: 120
+Input Line Value[2] is: 130
+The sum of the values in the line is: 390
+Input Line Value[0] is: 1
+Input Line Value[1] is: 2
+Input Line Value[2] is: 3
+Input Line Value[3] is: 4
+Input Line Value[4] is: 5
+Input Line Value[5] is: 6
+Input Line Value[6] is: 7
+Input Line Value[7] is: 8
+Input Line Value[8] is: 9
+The sum of the values in the line is: 45
+Input Line Value[0] is: 90
+Input Line Value[1] is: 80
+Input Line Value[2] is: 70
+Input Line Value[3] is: 60
+The sum of the values in the line is: 300

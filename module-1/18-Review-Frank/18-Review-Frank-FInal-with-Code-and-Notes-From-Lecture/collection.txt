@@ -1,0 +1,7 @@
+* An asterisk In position 1 indicates a comment and should be ignored when processing the file
+*C|itemName | whenAddedToCollection | purchaseAmt  | willingToSell | coinYear | coinMint | coinFace  | coinMaterial
+C|Roosevelt Dime|03/19/1952|3.00|false|1950|P|Roosevelt|Silver-90 
+C|Lincoln Penny|08/31/1973|1.50|false|1970|D|Lincoln|Copper
+C|Kennedy Half Dollar|01/12/1970|4.50|false|1965|D|Kennedy|Silver
+C|Buffalo Nickel|10/12/2005|0.00|true|2004|P|Buffalo|Copper-Nickel
+*W|itemName       | whenAddedToCollection  | purchaseAmt  | willingToSell | wineYear | wineMaker | wineCountry | wineVariety |

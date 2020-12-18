@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNIST</title> 
+
+    <link rel="stylesheet", href="style.css"/> <!-- link to connect to an external resource -->
+</head>
+
+<body> <!-- The primary content to the web page -->
+    <h1>Building an MNIST classifer with Pytorch</h1>
+    <p>Using the very helpful PyTorch libary you can create a neural network in only a couple lines of code</p>
+    <p></p>
+    <main> <!-- Documents the main part of the page - use css to style all the elements as a group -->
+        <h2>To build this neural network</h2>
+        <p>Python 3.8</p>
+        <p>Pytorch</p>
+    </main>
+    <img src='img/mnist_2layers.png' class="center"/>
+    <body> <!-- Documents the main part of the page - use css to style all the elements as a group -->
+        <h3>Building the network</h3>
+        <p>First we need to import the Libaries nessary</p>
+            <pre>import torch</pre>
+            <pre>import torch.nn as nn</pre>
+            <pre>import torch.nn.functional as F</pre>
+        <h3>Then we create a class in which our neural network will go</h3>
+            <pre>class BrendanNet(torch.nn.Module):</pre>
+            <pre>def __init__(self):</pre>
+            <pre>super(Bnet, self).__init__()</pre>
+            <pre>self.l1 = nn.Linear(784, 128, bias=False)</pre>
+            <pre>self.l2 = nn.Linear(128, 10, bias=False)</pre>
+            <pre>self.sm = nn.LogSoftmax(dim=1)</pre>
+            <pre>def forward(self, x):</pre>
+            <pre>x = F.relu(self.l1(x))</pre>
+            <pre>x = self.l2(x)</pre>
+            <pre>x = self.sm(x)</pre>
+            <pre>return x</pre>
+
+            <h3>Above we initialized two layers a LogSoftmax and a method for a forward pass</h3>
+            <p>I was able to train this neural network and it was 94% accurate at guessing digits</p>
+            <p>Are you interested in Neural Networks?</p>
+            <nav>
+                <a href="form.html" class="center">Fill out the survey</a> 
+             </nav>
+    </body>
+</body>
+<!-- SVG def -->
+
+
+
+</html> <!-- marks the end of the html container -->

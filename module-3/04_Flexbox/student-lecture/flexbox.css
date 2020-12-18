@@ -1,0 +1,53 @@
+/* List the elements to be flexbox'd */
+/* Puts all elements at the top of the page, Frank says this can make it easier to layout */
+body,
+#hero footer,
+#featured section,
+#featured section article div,
+#all-items section,
+#all-items section article {
+    display: flex;
+}
+
+
+/* Make the flex direction a column, which makes the display vertical
+Thing are displayed as columns                                        */
+body,
+#all-item section {
+    flex-direction: column;
+}
+
+
+/* Align everything in the body center */
+body {
+    align-items: center;
+}
+
+#featured section article div {
+    justify-content: center; /* Since we changed the body direction to align-items: center; we have to use justify-content: center; here */
+}
+
+#all-item section article {
+    justify-content: center;
+}
+
+#hero footer {
+    justify-content: space-between;
+    align-items: center;
+}
+
+#all-items article:nth-child(even) div:first-child { /* Style based on the child's position */ 
+    /* Change the order how the flex containers appear */
+    order: 2;
+}
+
+#all-items article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+@media screen and (max-width:512px) {
+    #featured section {
+        flex-wrap: wrap;
+    }
+
+}

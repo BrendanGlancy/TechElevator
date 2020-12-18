@@ -1,0 +1,75 @@
+
+html { /* everything in the html tags */
+    height: 100%;
+}
+
+* { /* everything in the html file */
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body { /* everything in the body tags */
+    white-space: nowrap;
+    background-image: linear-gradient(to bottom #858c90 #BBB);
+    background-repeat: fixed;
+    background-attachment: fixed;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(154, 158, 167);
+}
+
+header { /* Don't let the header scroll */
+    position: fixed;
+    top: 0;
+    height: 50px;
+}
+
+header > h1, header > p { /* Style the header element's child h1-tags and header element's child p-tag */
+    display: inline-block;
+    height: 20px;
+    vertical-align: middle;
+    padding-right: 20px;
+    color: rgba(255, 255, 255, .8);
+    border-right: 1px solid rgba(255, 255, 255, .5); /* Put the vertical bar between the entries */
+}
+
+header > h1 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+main {
+
+    margin-top: 50px;
+}
+
+div.trello-list { /* Style all the div's with the class trello-list (. indictes a class name) */
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    background-color: #DDD;
+    border-radius: 2px 3px;
+}
+
+div.trello-list h2 { /* style the h2 in the divs with the class trello-list */
+    margin: 8px;
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+div.trello-list ol {
+    margin: 0px;
+    padding: 0px;
+}
+
+div.trello-list li {
+    list-style: none;
+    background-color: rgb(255, 255, 255);
+    font-size: .9rem;
+    border-radius: 1px;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+div.trello-list li:hover {
+    background-color: rgba(9, 45, 66, .1);
+}

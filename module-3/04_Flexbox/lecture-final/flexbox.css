@@ -1,0 +1,38 @@
+/* List the elements to be flexbox'd */
+body, 
+#hero footer,
+#featured section,
+#featured section article div,
+#all-items section,
+#all-items section article {
+    display : flex;
+}
+body,     
+#all-items section   { 
+    flex-direction: column;  /* display as a column instead of a row */
+}
+body {
+    align-items: center;  /* center the content in the flex container*/
+}
+
+#featured section article div { /* style the icons in featured items */
+    justify-content: center;
+}
+
+#all-items section article {  /* style the pizza and custard in all items */
+    justify-content: center;
+}
+
+#hero footer {  /* style the bottom (footer) of the element id="hero" */
+    justify-content: space-between;
+    align-items: center;
+}
+#all-items article:nth-child(even) div:first-child { /* style based on a child's position           */
+                                                     /* This the style for the div child in article */
+order: 2;
+}
+@media screen and (max-width: 512px) {
+    #featured section {
+        flex-direction: column;
+    }
+}

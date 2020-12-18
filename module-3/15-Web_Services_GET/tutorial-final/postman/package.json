@@ -1,0 +1,12 @@
+{
+  "name": "postman-tutorial",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "json-server ./db/instaounce.json"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "json-server": "^0.16.0"
+  }
+}

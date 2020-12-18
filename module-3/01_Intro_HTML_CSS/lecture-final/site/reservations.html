@@ -1,0 +1,90 @@
+<!DOCTYPE html>    <!-- DOCTYPE tells the browser this file contains HTML - optional -->
+<html lang="en">   <!-- Container for all html in the file - required - root of all html -->
+
+<head>  <!-- Contains information the browser and CSS mau need to know about this html -->
+    <meta charset="UTF-8"> <!-- meta tag information for the browser -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture Code-Reservation - Day 1</title> <!-- Words displayed in the tab for the browser -->
+    
+    <!--  rel="type-of-resource", href="location of the resource" - href is usually a path/filename or URL -->
+    <link rel="stylesheet", href="styles.css"/> <!-- <link> connect to an external resource -->
+
+</head>
+
+<body> <!-- The primary content of the web page - most of your coding ge=oes here-->
+    <h1>Bits & Bytes</h1> <!-- heading tags h1, h2, h3 provide a simple way to put headings on a page-->
+    <p>The internet's best (non-Italian) restaurant!</p>  <!-- <p> is used to put words on the page -->
+
+    <nav> <!-- Navigation to other pages/resources-->
+          <!-- An anchor tag (<a>) is used for links to other resources from a page               --> 
+          <!-- the href= attibute specifies the URL of where you want to go                       -->
+          <!-- if the link tis to a resource in the same project - the project folder is the root -->
+          <a href="./index.html">View Menu</a> <!-- Provide a link to index displayed as "View Menu"-->
+
+    </nav>
+    <main> <!-- Documents or groups components for the main part usually for styling        -->
+        <h2>Reservation Form</h2>
+    <!-- Define a form to collect user input and send it to an api (someday)                -->
+    <!-- We are using a non-existing/dummy api for today as an example                      -->
+    <!-- We are doing a POST, because in the real world form data is sent                   -->
+    <!--     in the body of the request to protect it and it usually adds to a resource     -->
+    <!-- When the form is submitted, send the data in the form to action URL using a POST   -->
+    <form method="POST" action="https://5f02f3429e41230016d43346.mockapi.io/api/reservations">
+        <!-- <label> tag associates a caption with an input tag                              -->
+        <!--     the for= attribute is the name of the control the label is associated with  -->
+        <!-- <input> tag is used to define all user interactions                             -->
+        <!--     the type= attribute of the input tag identifies the type of interaction     -->
+        <!--     the id= attribute identifies a name for the control for use in the html     -->
+        <!--               typically used in the for= of label to associate it with the label-->
+        <!--     the name= attribute identifies the name of a variable to hold the value     -->
+        <!--               the name is used by any program processing the data               --> 
+        <!--               the name does NOT have to match the id=. but usually does         -->
+        <div> <!-- group a set of html for styling - has no impact on display in browser     -->
+            <div> 
+                <label for="reservationName">Name</label>
+                <input  id="reservationName"type="text" name="reservationName"/>
+            </div>
+            <div> 
+                <label for="howManyGuests">Number of guests</label>
+                <input  id="howManyGuests" name="numberOfGuests" type="number"/>
+            </div>
+            <div> 
+                <label for="reservationDate">Date:</label>
+                <input  id="reservationDate" name="reservationDate" type="date"/>
+            </div>
+            <div> 
+                <label for="reservationTime">Time</label>
+                <input  id="reservationTime" name="reservationTime" type="time"/>
+            </div>
+            <div> 
+                <label for="specialOccasion">Special Occasion?</label>
+                <input  id="specialOccasion" type="checkbox" name="specialOccasion"/>
+            </div>
+            <div>
+                <label for="occasion">Type of occassion?</label>
+                <select name="occasion" id="occasion"> <!-- Drop down list -->
+                    <option value="none">None</option> <!-- List options - value is what's returned when option is chosen-->
+                    <option value="bday">Birthday</option>
+                    <option value="anniv">Anniversary</option>
+                    <option value="nuptuals">Marriage</option>
+                    <option value="divorce">Divorce</option>
+                    <option value="birth">Baby born!</option>
+                    <option value="pregnant">We're having a baby!</option>
+                    <option value="grad">Graduation</option>
+                    <option value="other">Other</option>
+                  </select>
+            </div>
+        <!-- We need to define a submit button to have the user input sent to the API        -->
+        <!--            using the http request and url in the form tag                       -->
+        <div> <!-- This is the form submit button - causes the form to be sent to action URL -->
+            <input type="submit"/> <!-- define a submit button to the form-->
+        </div>
+    </form>
+    
+    
+    
+    
+    </main>
+
+</body>
+</html>

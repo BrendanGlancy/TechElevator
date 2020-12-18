@@ -1,0 +1,33 @@
+
+
+h1 { /* we want to style all heading one tags */
+    font-size: 32px;
+    color: cornflowerblue;
+}
+
+h2 {
+    color: cornflowerblue;
+}
+h3 {
+    color: violet;
+}
+
+p {
+    color: white;
+}
+
+b {
+    color: darkgoldenrod;
+}
+
+body {
+    background: midnightblue;
+}
+
+label {
+    color: white;
+}
+
+a {
+    color: cornflowerblue;
+}

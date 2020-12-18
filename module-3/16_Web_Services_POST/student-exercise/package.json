@@ -1,0 +1,37 @@
+{
+  "name": "readit-exercise",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "npm-run-all --parallel json-server start",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "json-server": "json-server ./db/readit.json --routes ./db/routes.json",
+    "json-server-test": "json-server ./db/readit-test.json --routes ./db/routes.json",
+    "start": "vue-cli-service serve",
+    "test:e2e": "npm-run-all --parallel json-server-test test:e2e-alone",
+    "test:e2e-headless": "npm-run-all --parallel json-server cypress:headless",
+    "test:e2e-alone": "vue-cli-service test:e2e",
+    "cypress:headless": "vue-cli-service test:e2e --headless"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "core-js": "^3.6.4",
+    "json-server": "^0.16.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.5",
+    "vuex": "^3.1.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-e2e-cypress": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-plugin-router": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "npm-run-all": "^4.1.5",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/http-server",
+    "cypress:run": "./node_modules/.bin/cypress run -c video=false",
+    "cypress:open": "cypress open -c video=false",
+    "test": "npm-run-all -p start cypress:open ",
+    "test-headless": "npm-run-all -p start cypress:run"
+  },
+  "keywords": [],
+  "author": "Tech Elevator",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.3.1",
+    "http-server": "^0.11.1",
+    "npm-run-all": "^4.1.5"
+  }
+}

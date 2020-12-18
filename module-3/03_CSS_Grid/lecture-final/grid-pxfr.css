@@ -1,0 +1,49 @@
+.container { /* style the content of the page */
+    display: grid;   /* tell the browser we want to make a grid  */
+
+    /* Using a combination of other units of measure (px, %) with fractional units          */
+    /*       the browser will determine width of the fractional unit columns based on       */
+    /*       the space left in viewscreen after allocating space for the non-fr columns     */
+    /* Define 3-column grid where left and right columns are the same size                  */
+    /*        and middle column is whatever space is remains between the left/right columns */
+    grid-template-columns: 200px 1fr 200px ; /* Define the columns in the grid */
+                                             /* equal size on left and right and divide what's left into 1fr */
+
+    grid-template-areas:                /* assign names to the columns and which grid area they apply to */
+    "header    header  header"          /* assign the name header to all the columns in the first row    */
+    "menu-nav  main    upcoming-events" /* assign different names to each column in the second row       */
+    "footer    footer  footer"          /* assign all the columns in the third row the name footer       */
+    ;
+    
+    grid-gap: 10px;  /* set teh spacing between the rows and columns to 10px */
+}
+header { /* style the header element in the html */
+    grid-area: header;  /* assign the element to the grid area named header */
+}
+nav#menu-nav {  /* style the name with id="menu-nav" */
+    grid-area: menu-nav; /* assign the element to the grid area named menu-nav */
+}
+main { /* style the main element in the html */
+    grid-area: main;    /* assign the element to grid area named main */
+}
+aside { /* style the aside element */
+ grid-area: upcoming-events; /* assign the element to grid area upcoming events */
+}
+footer {  /* style the footer element */
+    grid-area: footer;  /* assign the footer element to the grid area named footer */
+}
+/* Add responsive styling to the page */
+
+
+@media screen and  (max-width: 768px) { /* apply this styling to screens with max width of 768px */
+    .container { /* style the content of the page for smaller screen */
+        grid-template-areas :   /* redefine the grid rows */
+        "header"
+        "menu-nav"
+        "main"
+        "upcoming-events"
+        "footer"
+        ;
+        grid-template-columns : 1fr; /* refine the grid to 1 column */
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> <!-- Contains information the Browser and CSS may need to know about this html-->
+    <meta charset="UTF-8"> <!-- meta tag information for the browser -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture Code</title> <!-- The words displayed for the tab for the browser -->
+
+    <link rel="stylesheet", href="style.css"/> <!-- link to connect to an external resource -->
+</head>
+
+<body> <!-- The primary content to the web page -->
+    <h1>Bits and Bytes</h1>
+    <p>This is <b><em>Brendan Glancys</em></b> First HTML page for <b><em>Tech Elevator</em></b></p>
+    <a href="./index.html">Menu</a> 
+    
+</body>
+<main>
+    <form method="POST", action="http://someserver.api/reservations">
+        <div>
+            <div>
+                <label for="reservationName">Name</label>
+                <input id="reservationName" type="text"></input>
+            </div>
+            <div>
+                <label for="numberOfGuest">How many people</label>
+                <input id="numberOfGuest" type="number"></input>
+            </div>
+            <div>
+                <label for="reservationDate">When are you coming</label>
+                <input id="reservationDate" type="datetime-local"></input>
+            </div>
+            <div>
+                <label for="reservationTime">Arrival Time</label>
+                <input id="reservationTime" type="time"></input>
+            </div>
+            <div>
+                <label for="specialOccasion">Special Occasion</label>
+                <input id="specialOccasion" type="checkbox"></input>
+            </div>
+            
+        </div>
+        <div>
+            <input type="submit"/>
+        </div>
+    </form>
+</main>
+</html> <!-- marks the end of the html container -->

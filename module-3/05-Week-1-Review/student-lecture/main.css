@@ -1,0 +1,138 @@
+:root { /* These can be used or applied to the css file - not the HTML */
+  /* variables may be used in css provide common characteristics across rules */
+    --orange: #f7921c; /* assign a variable to a color */
+    --grey: #f2f2f4; 
+    --dark-grey: rgba(50, 53, 62, 0.05);
+    --black: rgba(60, 60, 60, 1);
+  }
+  
+  html {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23f7921c' fill-opacity='0.14' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
+  }
+  * {  /* applies to everything in the html */
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+  }
+  
+  /* Resets */
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Resets */
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  a {
+    color: var(--black);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .center {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* grid of 10 columns where the middle 4 are twice the width of the left and right columns */
+  body {
+    /* tell the browser we want to use the grid layout */
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr; /* you can use percentages, but they may add a scroll bar */
+    grid-template-areas: 
+    ". banner banner nav nav ." /* assign names to the first column */
+    ". main main main main ." /* assign name to all columns in Second row */
+    ". order-now order-now store store ."; /* assign name to all columns Third column */
+    grid-gap: 10px;
+
+  }
+
+  header {
+    grid-area: banner;
+  }
+
+  nav { /* assign the nav element to the grid called nav */
+    grid-area: nav;
+  }
+
+  main {
+    grid-area: main;
+    background-color: var(--grey);
+  }
+
+  #order-now { /* assign the element with the id order-now to the grid area order-now */
+    grid-area: order-now;
+  }
+
+  #store { /* assign the element with the id store to the grid area store */
+    grid-area: store;
+  }
+
+  /* now that we have elements placed in their grid-area we need to style each element */
+  nav { /* Style the nav area as a row */
+    display: flex; 
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    list-style: none; /* remove the bullets */
+    background-color: var(--orange);
+    width: 30%;  /* make the width of each item 30% */
+    line-height: 50px; /* make the line-height 50px */
+    border-radius: 10px; /* slighty round the corners */
+    text-align: center;  /* center the text in the box */
+    text-transform: uppercase;
+  }
+
+  main {
+    display: flex; /* Style the columns in main as a rows */
+    background-color: var(--grey);
+  }
+
+  main img { /* set the img to the correct size */
+    width: 35%;
+    height: 350px;
+    object-fit: cover; /* scale the image to fit when the size of the window changes */
+  }
+
+  .content {
+    margin-left: 20px;
+  }
+ 
+
+  #order-now {
+    background-color: var(--grey);
+  }
+  
+  #store {
+    background-color: var(--grey);
+  }
+
+  #store h3 {
+    text-align: center;
+  }
+
+  #store a {
+    text-align: center;
+    background-color: var(--black);
+    border-radius: 10px;
+    color: var(--grey);
+    width: 25%;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
+
+
+

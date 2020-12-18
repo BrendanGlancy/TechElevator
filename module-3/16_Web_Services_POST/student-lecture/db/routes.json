@@ -1,0 +1,4 @@
+{
+    "/boards/:id": "/boards/:id?_embed=cards",
+    "/cards/:id": "/cards/:id?_embed=comments"
+}

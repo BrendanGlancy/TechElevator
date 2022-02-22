@@ -19,5 +19,5 @@ Tenmo:
 Contains concepts we learning in the second module of Tech Elevator (DAO, JDBC, Postgres, MVC, Rest APIs) Pair Programmed with James Reese @JDReese2197 on GitHub.
 
 Capstone #3:
-https://github.com/BrendanGlancy/BreweryLocater3000
+https://github.com/BrendanGlancy/BreweryLocater
 Check it out, really cool site
